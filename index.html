@@ -7,6 +7,7 @@
     <title>Chik-Chik - Барбершоп</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/preload.css">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/navigation.css">
     <link rel="stylesheet" href="style/main-link.css">
@@ -14,7 +15,11 @@
     <link rel="stylesheet" href="style/slider.css">
     <link rel="stylesheet" href="style/price.css">
     <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/book.css">
+    <link rel="stylesheet" href="style/radio.css">
     <link rel="stylesheet" href="style/footer.css">
+
+    <script src="js/script.js"></script>
 
 </head>
 <body>
@@ -134,17 +139,17 @@
                 <p class="about__description">Сhik chik — это намного больше, чем просто барберная. Это место, где вам помогут найти свой собственный, неповторимый стиль. Стоит довериться нашим мастерам один раз, и, поверьте, новый образ не оставит Вас равнодушным. Мужские стрижки и опасное бритье — это наш профиль, и мы уверены, что наши барберы делают это лучше всех.</p>
 
                 <ul class="about__list">
-                    <li class="about__item">
+                    <li class="about__item about__item-top">
                         <h3 class="about__item-title">Топ специалисты</h3>
 
                         <p class="about__item-description">Мы подстрижем вас на высшем уровне</p>
                     </li>
-                    <li class="about__item">
+                    <li class="about__item about__item-master">
                         <h3 class="about__item-title">Мастера бород и усов</h3>
 
                         <p class="about__item-description">Мы заботливо уложим вашу бороду и усы</p>
                     </li>
-                    <li class="about__item">
+                    <li class="about__item about__item-garantee">
                         <h3 class="about__item-title">Гарантия качества</h3>
 
                         <p class="about__item-description">Мы используем только профессиональные средства</p>
@@ -165,7 +170,7 @@
 
                 <form action="" class="book__form">
                     <div class="book__form-container">
-                        <fieldset class="book__fielset">
+                        <fieldset class="book__fieldset">
                             <legend class="book__legend">Услуга</legend>
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="service">
@@ -203,36 +208,36 @@
                             </label>
                         </fieldset>
 
-                        <fieldset class="book__fielset">
+                        <fieldset class="book__fieldset">
                             <legend class="book__legend">Специалист</legend>
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="spec">
-                                <span class="radio__label radio__label_spec">Игорь</span>
+                                <span class="radio__label radio__label_spec" style="--bg-image: url(../img/spec1.png)">Игорь</span>
                             </label>
                             
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="spec">
-                                <span class="radio__label radio__label_spec">Анатолий</span>
+                                <span class="radio__label radio__label_spec" style="--bg-image: url(../img/spec2.png)">Анатолий</span>
                             </label>
                             
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="spec">
-                                <span class="radio__label radio__label_spec">Руслан</span>
+                                <span class="radio__label radio__label_spec" style="--bg-image: url(../img/spec3.png)">Руслан</span>
                             </label>
                             
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="spec">
-                                <span class="radio__label radio__label_spec">Михаил</span>
+                                <span class="radio__label radio__label_spec" style="--bg-image: url(../img/spec4.png)">Михаил</span>
                             </label>
                             
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="spec">
-                                <span class="radio__label radio__label_spec">Евгений</span>
+                                <span class="radio__label radio__label_spec" style="--bg-image: url(../img/spec5.png)">Евгений</span>
                             </label>
                         </fieldset>
 
                         <fieldset class="book__fieldset">
-                            <legend class="book__legend"></legend>
+                            <legend class="book__legend">Дата и время</legend>
 
                             <fieldset class="book__fieldset book__fieldset_sub">
                                 <label class="radio">
@@ -258,17 +263,17 @@
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="day">
                                     <span class="radio__label">19 января</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="day">
                                     <span class="radio__label">20 января</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="day">
                                     <span class="radio__label">21 января</span>
                                 </label>
                             </fieldset>
@@ -280,32 +285,32 @@
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="time">
                                     <span class="radio__label">11:30-13:00</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="time">
                                     <span class="radio__label">13:00-14:30</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="time">
                                     <span class="radio__label">14:30-16:00</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="time">
                                     <span class="radio__label">16:00-17:30</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="time">
                                     <span class="radio__label">17:30-19:00</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="time">
                                     <span class="radio__label">19:00-20:30</span>
                                 </label>
                             </fieldset>
