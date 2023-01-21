@@ -212,7 +212,7 @@ const renderTime = (wrapper, data) => {
 
 const initBook = () => {
     const bookForm = document.querySelector('.book__form');
-    const { fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn } = bookForm; 
+    const {fieldservice, fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn } = bookForm; 
     addDisabled([fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn]);
     bookForm.addEventListener('change', async (event) => { // change - смотрит не прошло ли изменение внутри внутри формы, если прошло, то запускает скрипт. 
         const target = event.target;
@@ -264,7 +264,29 @@ const initBook = () => {
             removeDisabled([btn]);
         }
     })
-}
+
+    bookForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(bookForm)
+        const json = JSON.stringify(Object.fromEntries(formData))
+
+        const response = await fetch(`${API_URL}api/order`, {
+            method: 'post',
+            body: json,
+        });
+
+        const data = await response.json();
+        addDisabled([fieldservice, fieldspec, fielddata, fieldmonth, fieldday, fieldtime, btn]);
+
+        const p = document.createElement('p');
+        p.textContent = `Спасибо за вашу бронь #${data.id}! Ждём вас ${new Intl.DateTimeFormat('ru-RU', {
+            month: 'long',
+            day: 'numeric',
+        }).format(new Date(`${data.month}/${data.day}`))}, время ${data.time}`;
+        bookForm.append(p);
+    });
+};
 
 const init = () => {
     initSlider();
