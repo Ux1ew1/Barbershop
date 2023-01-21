@@ -4,6 +4,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
 .radio__label {
     display: inline-block;
     padding: 16px 24px;
@@ -15,7 +16,11 @@
     border-radius: 36px;
 }
 
-.radio__label:hover {
+.radio-input:disabled + .radio__label {
+    opacity: 0.3;
+}
+
+.radio__label:hover:not(:disabled) {
     color: #EFE7BE;
 }
 

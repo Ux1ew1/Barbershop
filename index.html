@@ -147,7 +147,7 @@
                     <li class="about__item about__item-master">
                         <h3 class="about__item-title">Мастера бород и усов</h3>
 
-                        <p class="about__item-description">Мы заботливо уложим вашу бороду и усы</p>
+                        <p class="about__item-description">Мы заботливо уложим вашу бороду и&nbsp;усы</p>
                     </li>
                     <li class="about__item about__item-garantee">
                         <h3 class="about__item-title">Гарантия качества</h3>
@@ -168,9 +168,9 @@
                     <li class="book__item">Выберите удобный день и время</li>
                 </ol>
 
-                <form action="" class="book__form">
+                <form class="book__form">
                     <div class="book__form-container">
-                        <fieldset class="book__fieldset">
+                        <fieldset class="book__fieldset book__fieldset_service">
                             <legend class="book__legend">Услуга</legend>
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="service">
@@ -208,7 +208,7 @@
                             </label>
                         </fieldset>
 
-                        <fieldset class="book__fieldset">
+                        <fieldset class="book__fieldset" name="fieldspec">
                             <legend class="book__legend">Специалист</legend>
                             <label class="radio">
                                 <input class="radio-input" type="radio" name="spec">
@@ -236,27 +236,27 @@
                             </label>
                         </fieldset>
 
-                        <fieldset class="book__fieldset">
+                        <fieldset class="book__fieldset" name="fielddata">
                             <legend class="book__legend">Дата и время</legend>
 
-                            <fieldset class="book__fieldset book__fieldset_sub">
+                            <fieldset class="book__fieldset book__fieldset_sub" name="fieldmonth">
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="month">
                                     <span class="radio__label">Январь</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="month">
                                     <span class="radio__label">Февраль</span>
                                 </label>
 
                                 <label class="radio">
-                                    <input class="radio-input" type="radio" name="mounth">
+                                    <input class="radio-input" type="radio" name="month">
                                     <span class="radio__label">Март</span>
                                 </label>
                             </fieldset>
 
-                            <fieldset class="book__fieldset book__fieldset_sub">
+                            <fieldset class="book__fieldset book__fieldset_sub" name="fieldday">
                                 <label class="radio">
                                     <input class="radio-input" type="radio" name="day">
                                     <span class="radio__label">18 января</span>
@@ -278,7 +278,7 @@
                                 </label>
                             </fieldset>
 
-                            <fieldset class="book__fieldset book__fieldset_sub">
+                            <fieldset class="book__fieldset book__fieldset_sub" name="fieldtime">
                                 <label class="radio">
                                     <input class="radio-input" type="radio" name="time">
                                     <span class="radio__label">10:00-11:30</span>
@@ -316,7 +316,7 @@
                             </fieldset>
                         </fieldset>
                     </div>
-                    <button class="book__button main-link">Записаться</button>
+                    <button class="book__button main-link" id="btn" disabled>Записаться</button>
                 </form>
             </div>
         </section>
@@ -327,7 +327,7 @@
             <div class="footer__wrapper">
                 <img class="footer__logo" src="/img/logo.svg" alt="Футер логотип">
 
-                <nav class="navigation">
+                <div class="navigation">
                     <ul class="footer__navigation navigation__list">
                         <li class="navigation__item">
                             <a href="#price" class="navigation__link">Стоимость услуг</a>
@@ -337,11 +337,11 @@
                             <a href="#about" class="navigation__link">О нас</a>
                         </li>
                     </ul>
-                </nav>
+                </div>
 
                 <ul class="footer__list">
-                    <li class="footer__item">Designer: Anastasia Ilina</li>
-                    <li class="footer__item">Developer: Uxlewl</li>
+                    <li class="footer__item">Designer: <a class="footer__item-link" href="https://t.me/Mrshmallowww">Anastasia Ilina</a></li>
+                    <li class="footer__item">Developer: <a class="footer__item-link" href="https://t.me/Uxlewl">Uxlewl</a></li>
                 </ul>
             </div>
 

@@ -55,6 +55,14 @@
         padding: 40px 0 80px;
     }
 
+    .book__title {
+        font-size: 32px;
+    }
+
+    .book__list {
+        margin-bottom: 40px;
+    }
+
     .book__legend {
         margin-bottom: 16px;
         font-size: 16px;
@@ -67,11 +75,35 @@
     .book__fieldset {
         margin: 0 0 40px;
     }
+
+    .book__fieldset_sub {
+        margin-bottom: 20px;
+    }
     
 }
 
 @media (max-width: 560px) {
     .book {
         padding: 32px 0 64px;
+    }
+
+    .book__title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .book__list {
+        padding-left: 18px;
+        margin-bottom: 32px;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .book__fieldset {
+        margin-bottom: 32px;
+    }
+
+    .book__form-container {
+        margin-bottom: 24px;
     }
 }
